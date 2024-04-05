@@ -1,19 +1,19 @@
-"use client";
-import React from "react";
-import dynamic from "next/dynamic";
+'use client';
+import React from 'react';
+import dynamic from 'next/dynamic';
 
 const AnimatedNumbers = dynamic(
   () => {
-    return import("react-animated-numbers");
+    return import('react-animated-numbers');
   },
   { ssr: false }
 );
 
 const achievementsList = [
   {
-    metric: "Projects",
-    value: "7",
-    postfix: "+",
+    metric: 'Projects',
+    value: '7',
+    postfix: '+',
   },
   // {
   //   prefix: "~",
@@ -25,9 +25,9 @@ const achievementsList = [
   //   value: "7",
   // },
   {
-    metric: "Years Experience",
-    value: "1",
-    postfix:"+"
+    metric: 'Years Experience',
+    value: '1',
+    postfix: '+',
   },
 ];
 
@@ -58,7 +58,15 @@ const AchievementsSection = () => {
                 />
                 {achievement.postfix}
               </h2>
-              <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+
+              <div className="lg:flex lg:flex-row lg:gap-2">
+                <p className="text-[#ADB7BE] text-base text-center">
+                  {achievement.metric.split(' ')[0]}
+                </p>
+                <p className="text-[#ADB7BE] lg:text-base">
+                  {achievement.metric.split(' ')[1]}
+                </p>
+              </div>
             </div>
           );
         })}
