@@ -85,10 +85,10 @@ const techStacks = {
       name: 'Mongoose',
       svg: <MongooseSVG />,
     },
-    {
-      name: 'Socket.io',
-      svg: <SOCKETIO />,
-    },
+    // {
+    //   name: 'Socket.io',
+    //   svg: <SOCKETIO />,
+    // },
 
     {
       name: 'Tailwind-CSS',
@@ -240,7 +240,7 @@ const projectsData = [
             </a>
           </span>
         </div>
-        <div className="grid lg:grid-cols-7 grid-cols-4">
+        <div className="grid lg:grid-cols-6 grid-cols-4">
           {techStacks['xylexaPortal'].map((logo, index) => {
             return (
               <div
@@ -281,7 +281,7 @@ const projectsData = [
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-7 grid-cols-4">
+        <div className="grid lg:grid-cols-6 grid-cols-4">
           {techStacks['chatSphere'].map((logo, index) => {
             return (
               <div
@@ -321,7 +321,7 @@ const projectsData = [
             </a>
           </span>
         </div>
-        <div className="grid lg:grid-cols-7 grid-cols-4">
+        <div className="grid lg:grid-cols-6 grid-cols-4">
           {techStacks['natoursAPI'].map((logo, index) => {
             return (
               <div
@@ -359,7 +359,7 @@ const projectsData = [
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-7 grid-cols-4">
+        <div className="grid lg:grid-cols-6 grid-cols-4">
           {techStacks['gpt3'].map((logo, index) => {
             return (
               <div
@@ -399,7 +399,7 @@ const projectsData = [
             </a>
           </span>
         </div>
-        <div className="grid lg:grid-cols-7 grid-cols-4">
+        <div className="grid lg:grid-cols-6 grid-cols-4">
           {techStacks['mernEssentials'].map((logo, index) => {
             return (
               <div
@@ -436,7 +436,7 @@ const projectsData = [
             </a>
           </span>
         </div>
-        <div className="grid lg:grid-cols-7 grid-cols-4">
+        <div className="grid lg:grid-cols-6 grid-cols-4">
           {techStacks['faceFind'].map((logo, index) => {
             return (
               <div
@@ -474,7 +474,7 @@ const projectsData = [
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-7 grid-cols-4">
+        <div className="grid lg:grid-cols-6 grid-cols-4">
           {techStacks['portfolioWebsite'].map((logo, index) => {
             return (
               <div
