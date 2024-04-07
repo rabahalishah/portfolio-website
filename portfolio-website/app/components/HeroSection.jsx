@@ -47,7 +47,7 @@ const HeroSection = ({ scrollToContact }) => {
             </Link>
             <Link
               target="_blank"
-              href="/files/Rabah_Ali_Shah_Software_Engineer_Resume.pdf"
+              href="/files/Rabah_Ali_Shah_Resume.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#af67f9] to-[#e48d87] hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
