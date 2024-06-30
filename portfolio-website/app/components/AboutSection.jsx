@@ -1,9 +1,9 @@
-'use client';
-import React, { useTransition, useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Tooltip } from 'react-tooltip';
+"use client";
+import React, { useTransition, useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Tooltip } from "react-tooltip";
 
-import Image from 'next/image';
+import Image from "next/image";
 import {
   ReactSVG,
   MongoDBSVG,
@@ -25,20 +25,20 @@ import {
   PostmanSVG,
   FigmaSVG,
   MaterialUI,
-} from '../../public/svgs/tech-skills-svgs';
+} from "../../public/svgs/tech-skills-svgs";
 
-import TabButton from './TabButton';
+import TabButton from "./TabButton";
 const SKILLS_DATA = [
   {
-    name: 'React',
+    name: "React",
     svg: <ReactSVG />,
   },
   {
-    name: 'Next.js',
+    name: "Next.js",
     svg: <NextSVG />,
   },
   {
-    name: 'Redux',
+    name: "Redux",
     svg: <ReduxSVG />,
   },
   // {
@@ -46,57 +46,57 @@ const SKILLS_DATA = [
   //   svg: <ReduxSagaSVG />,
   // },
   {
-    name: 'JavaScript',
+    name: "JavaScript",
     svg: <JavascriptSVG />,
   },
   {
-    name: 'TypeScript',
+    name: "TypeScript",
     svg: <TypescriptSVG />,
   },
   {
-    name: 'Tailwind-CSS',
+    name: "Tailwind-CSS",
     svg: <TailwindSVG />,
   },
   {
-    name: 'Material-UI',
+    name: "Material-UI",
     svg: <MaterialUI />,
   },
   {
-    name: 'Bootstrap',
+    name: "Bootstrap",
     svg: <BootstrapSVG />,
   },
   {
-    name: 'HTML5',
+    name: "HTML5",
     svg: <HtmlSVG />,
   },
   {
-    name: 'CSS3',
+    name: "CSS3",
     svg: <CssSVG />,
   },
   {
-    name: 'Node.js',
+    name: "Node.js",
     svg: <NodeSVG />,
   },
 
   {
-    name: 'Express.js',
+    name: "Express.js",
     svg: <ExpressJsSVG />,
   },
   {
-    name: 'MongoDB',
+    name: "MongoDB",
     svg: <MongoDBSVG />,
   },
   {
-    name: 'Mongoose',
+    name: "Mongoose",
     svg: <MongooseSVG />,
   },
 
   {
-    name: 'JWT',
+    name: "JWT",
     svg: <JwtSVG />,
   },
   {
-    name: 'Git',
+    name: "Git",
     svg: <GitSVG />,
   },
   // {
@@ -104,58 +104,58 @@ const SKILLS_DATA = [
   //   svg: <JiraSVG />,
   // },
   {
-    name: 'Postman',
+    name: "Postman",
     svg: <PostmanSVG />,
   },
   {
-    name: 'Figma',
+    name: "Figma",
     svg: <FigmaSVG />,
   },
 ];
 
 const CERTIFICATES_DATA = [
   {
-    name: 'React - The Complete Guide',
-    image: '/images/UDEMY.png',
-    bg: 'bg-[#a633f1]',
-    link: 'https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=LETSLEARNNOW',
-    author: '~Maximilian schwarzmüller',
+    name: "React - The Complete Guide",
+    image: "/images/UDEMY.png",
+    bg: "bg-[#a633f1]",
+    link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=LETSLEARNNOW",
+    author: "~Maximilian schwarzmüller",
   },
   {
-    name: 'Complete Node.js Bootcamp',
-    image: '/images/UDEMY.png',
-    bg: 'bg-[#a633f1]',
-    link: 'https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/?couponCode=LETSLEARNNOW',
-    author: '~Jonas Schmedtmann',
+    name: "Complete Node.js Bootcamp",
+    image: "/images/UDEMY.png",
+    bg: "bg-[#a633f1]",
+    link: "https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/?couponCode=LETSLEARNNOW",
+    author: "~Jonas Schmedtmann",
   },
   {
-    name: 'The Complete Web Developer Bootcamp - Zero to Mastery',
-    image: '/images/UDEMY.png',
-    bg: 'bg-[#a633f1]',
-    link: 'https://zerotomastery.io/courses/coding-bootcamp/',
-    author: '~Andrei Neagoie',
+    name: "The Complete Web Developer Bootcamp - Zero to Mastery",
+    image: "/images/UDEMY.png",
+    bg: "bg-[#a633f1]",
+    link: "https://zerotomastery.io/courses/coding-bootcamp/",
+    author: "~Andrei Neagoie",
   },
   {
-    name: 'The Complete Python Developer - Zero to Mastery',
-    image: '/images/UDEMY.png',
-    bg: 'bg-[#a633f1]',
-    link: 'https://www.udemy.com/course/complete-python-developer-zero-to-mastery/?couponCode=LETSLEARNNOW',
-    author: '~Andrei Neagoie',
+    name: "The Complete Python Developer - Zero to Mastery",
+    image: "/images/UDEMY.png",
+    bg: "bg-[#a633f1]",
+    link: "https://www.udemy.com/course/complete-python-developer-zero-to-mastery/?couponCode=LETSLEARNNOW",
+    author: "~Andrei Neagoie",
   },
   {
-    name: 'Introduction to Linux Operating System',
-    image: '/images/freecodecamp.png',
-    bg: 'bg-[#090922]',
-    link: 'https://www.youtube.com/watch?v=ROjZy1WbCIA',
-    author: '~Joshua Lacy',
+    name: "Introduction to Linux Operating System",
+    image: "/images/freecodecamp.png",
+    bg: "bg-[#090922]",
+    link: "https://www.youtube.com/watch?v=ROjZy1WbCIA",
+    author: "~Joshua Lacy",
   },
 ];
 const EXPERIENCE_DATA = [
   {
-    title: 'React Developer',
-    image: '/images/experience/XYLEXA.png',
-    bg: 'bg-[#a633f1]',
-    link: 'https://www.linkedin.com/company/xylexa-inc/mycompany/',
+    title: "React Developer",
+    image: "/images/experience/XYLEXA.png",
+    bg: "bg-[#a633f1]",
+    link: "https://www.linkedin.com/company/xylexa-inc/mycompany/",
     description: (
       <ul className="space-y-1 list-disc list-outside">
         <li>
@@ -180,17 +180,17 @@ const EXPERIENCE_DATA = [
         </li>
       </ul>
     ),
-    startDate: 'Sep 2023',
-    EndData: 'Present',
-    jobType: 'Part-time',
-    location: 'Islamabad, Pakistan',
-    company: 'Xylexa, Inc',
+    startDate: "Sep 2023",
+    EndData: "Present",
+    jobType: "Part-time",
+    location: "Islamabad, Pakistan",
+    company: "Xylexa, Inc",
   },
   {
-    title: 'Sofware Engineer - Intern',
-    image: '/images/experience/XYLEXA.png',
-    bg: 'bg-[#a633f1]',
-    link: 'https://www.linkedin.com/company/xylexa-inc/mycompany/',
+    title: "Sofware Engineer - Intern",
+    image: "/images/experience/XYLEXA.png",
+    bg: "bg-[#a633f1]",
+    link: "https://www.linkedin.com/company/xylexa-inc/mycompany/",
 
     description: (
       <ul className="space-y-1 list-disc list-outside">
@@ -220,17 +220,17 @@ const EXPERIENCE_DATA = [
         </i>
       </ul>
     ),
-    startDate: 'June 2023',
-    EndData: 'Sep 2023',
-    jobType: 'Internship',
-    location: 'Islamabad, Pakistan',
-    company: 'Xylexa, Inc',
+    startDate: "June 2023",
+    EndData: "Sep 2023",
+    jobType: "Internship",
+    location: "Islamabad, Pakistan",
+    company: "Xylexa, Inc",
   },
   {
-    title: 'Frontend Developer',
-    image: '/images/experience/INTERNSPK.png',
-    bg: 'bg-[#a633f1]',
-    link: 'https://www.linkedin.com/company/interns-pakistan/',
+    title: "Frontend Developer",
+    image: "/images/experience/INTERNSPK.png",
+    bg: "bg-[#a633f1]",
+    link: "https://www.linkedin.com/company/interns-pakistan/",
     description: (
       <ul className=" space-y-1 list-disc list-outside">
         <li>
@@ -258,18 +258,18 @@ const EXPERIENCE_DATA = [
         </li>
       </ul>
     ),
-    startDate: 'June 2023',
-    EndData: 'July 2023',
-    jobType: 'Internship',
-    location: 'Remote',
-    company: 'Interns Pakistan',
+    startDate: "June 2023",
+    EndData: "July 2023",
+    jobType: "Internship",
+    location: "Remote",
+    company: "Interns Pakistan",
   },
 ];
 
 const TAB_DATA = [
   {
-    title: 'Skills',
-    id: 'skills',
+    title: "Skills",
+    id: "skills",
     content: (
       <div className="grid lg:grid-cols-12 lg:w-2/3 grid-cols-3">
         {SKILLS_DATA.map((icon, index) => {
@@ -289,8 +289,8 @@ const TAB_DATA = [
     ),
   },
   {
-    title: 'Experience',
-    id: 'experience',
+    title: "Experience",
+    id: "experience",
     content: (
       <div className="">
         {EXPERIENCE_DATA.map((experience, index) => {
@@ -308,7 +308,7 @@ const TAB_DATA = [
                     />
                   </div>
 
-                  <div className='w-full'>
+                  <div className="w-full">
                     <div class="p-4">
                       <a target="_blank" href={experience.link}>
                         <div className="lg:flex flex-row justify-between">
@@ -350,8 +350,8 @@ const TAB_DATA = [
     ),
   },
   {
-    title: 'Education',
-    id: 'education',
+    title: "Education",
+    id: "education",
     content: (
       <div className="grid grid-cols-1 mb-16">
         <div className="max-h-52 ">
@@ -386,8 +386,8 @@ const TAB_DATA = [
     ),
   },
   {
-    title: 'Certifications',
-    id: 'certifications',
+    title: "Certifications",
+    id: "certifications",
     content: (
       <div className="grid lg:grid-cols-3 sm:grid-col-1">
         {CERTIFICATES_DATA.map((certificate, index) => {
@@ -431,7 +431,7 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState('skills');
+  const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -464,73 +464,76 @@ const AboutSection = () => {
           </p>
           <div className="flex flex-row justify-center lg:justify-start mt-8">
             <TabButton
-              selectTab={() => handleTabChange('skills')}
-              active={tab === 'skills'}
+              selectTab={() => handleTabChange("skills")}
+              active={tab === "skills"}
             >
-              {' '}
-              Skills{' '}
+              {" "}
+              <span className="text-2xl">Skills </span>
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange('experience')}
-              active={tab === 'experience'}
+              selectTab={() => handleTabChange("experience")}
+              active={tab === "experience"}
             >
-              {' '}
-              Experience{' '}
+              {" "}
+              <span className="text-2xl">Experience </span>
+              
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange('education')}
-              active={tab === 'education'}
+              selectTab={() => handleTabChange("education")}
+              active={tab === "education"}
             >
-              {' '}
-              Education{' '}
+              {" "}
+              
+              <span className="text-2xl">Education </span>
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange('certifications')}
-              active={tab === 'certifications'}
+              selectTab={() => handleTabChange("certifications")}
+              active={tab === "certifications"}
             >
-              {' '}
-              Certifications{' '}
+              {" "}
+              
+              <span className="text-2xl">Certifications </span>
             </TabButton>
           </div>
-          {tab === 'skills' && (
+          {tab === "skills" && (
             <motion.div
               className="mt-8"
               variants={cardVariants}
               initial="initial"
-              animate={tab === 'skills' ? 'animate' : 'initial'}
+              animate={tab === "skills" ? "animate" : "initial"}
               transition={{ duration: 0.3, delay: 0.4 }}
             >
               {TAB_DATA[0].content}
             </motion.div>
           )}
-          {tab === 'experience' && (
+          {tab === "experience" && (
             <motion.div
               className="mt-8"
               variants={cardVariants}
               initial="initial"
-              animate={tab === 'experience' ? 'animate' : 'initial'}
+              animate={tab === "experience" ? "animate" : "initial"}
               transition={{ duration: 0.3, delay: 0.4 }}
             >
               {TAB_DATA[1].content}
             </motion.div>
           )}
-          {tab === 'education' && (
+          {tab === "education" && (
             <motion.div
               className="mt-8"
               variants={cardVariants}
               initial="initial"
-              animate={tab === 'education' ? 'animate' : 'initial'}
+              animate={tab === "education" ? "animate" : "initial"}
               transition={{ duration: 0.3, delay: 0.4 }}
             >
               {TAB_DATA[2].content}
             </motion.div>
           )}
-          {tab === 'certifications' && (
+          {tab === "certifications" && (
             <motion.div
               className="mt-8"
               variants={cardVariants}
               initial="initial"
-              animate={tab === 'certifications' ? 'animate' : 'initial'}
+              animate={tab === "certifications" ? "animate" : "initial"}
               transition={{ duration: 0.3, delay: 0.4 }}
             >
               {TAB_DATA[3].content}

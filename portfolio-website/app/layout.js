@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 import Head from 'next/head';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
   title: 'Rabah Ali Shah',
@@ -13,6 +14,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  console.log("process.env.GID: ",process.env.GID)
+
   return (
     <>
       <Head>
@@ -41,6 +44,7 @@ export default function RootLayout({ children }) {
           <Toaster position="top-center" />
           {children}
         </body>
+        <GoogleAnalytics gaId={`${process.env.GID}`} />
       </html>
     </>
   );
