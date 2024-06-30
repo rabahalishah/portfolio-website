@@ -152,7 +152,45 @@ const CERTIFICATES_DATA = [
 ];
 const EXPERIENCE_DATA = [
   {
-    title: "React Developer",
+    title: "Associate Software Engineer",
+    image: "/images/experience/XYLEXA.png",
+    bg: "bg-[#a633f1]",
+    link: "https://www.linkedin.com/company/xylexa-inc/mycompany/",
+    description: (
+      <ul className="space-y-1 list-disc list-outside">
+        <li>
+          XyCAD 3.1 Development and Maintenance: Working on the 3.1 version of
+          XyCAD, a product with a substantial codebase, ensuring adherence to
+          best coding practices.
+        </li>
+        <li>
+          Feature Development: Developing new features for XyCAD 3.1 to enhance
+          its functionality and performance.
+        </li>
+        <li>
+          Product Documentation: Creating and maintaining comprehensive
+          documentation for XyCAD and Xyportal to ensure clear understanding and
+          usability for end-users.
+        </li>
+        <i>
+          Xyportal Frontend Development and Maintenance: Responsible for the
+          development and upkeep of the Xyportal frontend, ensuring a seamless
+          user experience.
+        </i>
+        <li>
+          Backend Contribution: Assisting in the backend development of
+          Xyportal, contributing to scalable backend solutions.
+        </li>
+      </ul>
+    ),
+    startDate: "June 2024",
+    EndData: "Present",
+    jobType: "Full-time",
+    location: "Islamabad, Pakistan",
+    company: "Xylexa, Inc",
+  },
+  {
+    title: "Frontend Developer",
     image: "/images/experience/XYLEXA.png",
     bg: "bg-[#a633f1]",
     link: "https://www.linkedin.com/company/xylexa-inc/mycompany/",
@@ -181,7 +219,7 @@ const EXPERIENCE_DATA = [
       </ul>
     ),
     startDate: "Sep 2023",
-    EndData: "Present",
+    EndData: "June 2024",
     jobType: "Part-time",
     location: "Islamabad, Pakistan",
     company: "Xylexa, Inc",
@@ -462,7 +500,7 @@ const AboutSection = () => {
             teams to meet the client&apos;s requirements, and contributing to
             open-source projects is something I truly enjoy.
           </p>
-          <div className="flex flex-row justify-center lg:justify-start mt-8">
+          <div className="flex flex-row justify-center mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -476,14 +514,12 @@ const AboutSection = () => {
             >
               {" "}
               <span className="text-2xl">Experience </span>
-              
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
               {" "}
-              
               <span className="text-2xl">Education </span>
             </TabButton>
             <TabButton
@@ -491,7 +527,6 @@ const AboutSection = () => {
               active={tab === "certifications"}
             >
               {" "}
-              
               <span className="text-2xl">Certifications </span>
             </TabButton>
           </div>

@@ -64,7 +64,7 @@ const HeroSection = ({ scrollToContact }) => {
         >
           <div className="rounded-full bg-[#5c29a4] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/Rabah_Ali_Shah_Profile_port.jpg"
+              src="/images/Rabah_Ali_Shah_Profile_port.webp"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
               width={400}
