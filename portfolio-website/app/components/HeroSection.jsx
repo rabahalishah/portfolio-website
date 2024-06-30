@@ -24,7 +24,7 @@ const HeroSection = ({ scrollToContact }) => {
               sequence={[
                 'Rabah Ali Shah',
                 1000,
-                'Web Developer',
+                'Software Engineer',
                 1000,
                 'Problem Solver',
                 1000,
