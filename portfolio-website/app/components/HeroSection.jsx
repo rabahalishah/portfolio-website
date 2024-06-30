@@ -67,8 +67,9 @@ const HeroSection = ({ scrollToContact }) => {
               src="/images/Rabah_Ali_Shah_Profile_port.webp"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
+              
               width={400}
-              height={400}
+              height={100}
             />
           </div>
         </motion.div>
