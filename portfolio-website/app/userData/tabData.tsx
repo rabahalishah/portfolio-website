@@ -35,10 +35,10 @@ export const TAB_DATA = [
           return (
             <div key={index}>
               <div className="mb-4 border-2 border-white rounded-lg p-4">
-                <div class="max-w-full rounded-lg shadow lg:flex flex-row">
+                <div className="max-w-full rounded-lg shadow lg:flex flex-row">
                   <div>
                     <Image
-                      class="rouned-t-lg mx-auto lg:mt-4 lg:mr-4"
+                      className="rouned-t-lg mx-auto lg:mt-4 lg:mr-4"
                       src={experience.image}
                       alt=""
                       width={80}
@@ -47,11 +47,11 @@ export const TAB_DATA = [
                   </div>
 
                   <div className="w-full">
-                    <div class="p-4">
+                    <div className="p-4">
                       <a target="_blank" href={experience.link}>
                         <div className="lg:flex flex-row justify-between">
                           <div>
-                            <h5 class="lg:text-xl lg:text-left sm:text-lg font-bold tracking-tight text-center text-gray-900 dark:text-white">
+                            <h5 className="lg:text-xl lg:text-left sm:text-lg font-bold tracking-tight text-center text-gray-900 dark:text-white">
                               {experience.title}
                             </h5>
                             <p className="lg:text-left text-center">
@@ -85,22 +85,22 @@ export const TAB_DATA = [
     content: (
       <div className="grid grid-cols-1 mb-16">
         <div className="max-h-52 ">
-          <div class="max-w-96 rounded-lg shadow bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+          <div className="max-w-96 rounded-lg shadow bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
             <Image
-              class="rouned-t-lg bg-white mx-auto p-4"
+              className="rouned-t-lg bg-white mx-auto p-4"
               src="/images/NUST.png"
               alt=""
               width={150}
               height={150}
             />
             <div className="rounded-b-lg bg-[#034f8c]">
-              <div class="p-2">
+              <div className="p-2">
                 <a target="_blank" href="https://nust.edu.pk/">
-                  <h5 class="mb-2 lg:text-xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                  <h5 className="mb-2 lg:text-xl sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
                     National University of Science and Technology
                   </h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                   <div className="flex flex-row justify-between">
                     <p className="lg:text-lg sm:text-xsm">
                       Bachelor of Engineering
@@ -124,18 +124,18 @@ export const TAB_DATA = [
           return (
             <div key={index}>
               <div className="mb-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <div class="max-w-96 rounded-lg shadow bg-white">
+                <div className="max-w-96 rounded-lg shadow bg-white">
                   <Image
-                    class="rouned-t-lg bg-white mx-auto p-8"
+                    className="rouned-t-lg bg-white mx-auto p-8"
                     src={certificate.image}
                     alt=""
                     width={200}
                     height={200}
                   />
                   <div className={`rounded-b-lg ${certificate.bg} min-h-24`}>
-                    <div class="p-4">
+                    <div className="p-4">
                       <a target="_blank" href={certificate.link}>
-                        <h5 class="lg:text-xl text-center sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                        <h5 className="lg:text-xl text-center sm:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
                           {certificate.name}
                         </h5>
                         <p className="text-center">{certificate.author}</p>
