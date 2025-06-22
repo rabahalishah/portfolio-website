@@ -292,8 +292,8 @@ export const projectsData = [
     description: (
       <div>
         <div className="mb-4">
-          useSecureLocalStorage is a supercharged version of React's useState
-          hook, designed to securely store and persist state....
+          useSecureLocalStorage is a supercharged version of React&apos;s
+          useState hook, designed to securely store and persist state....
           <span className="underline text-blue-600">
             <a
               target="_blank"
