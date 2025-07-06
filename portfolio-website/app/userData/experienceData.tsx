@@ -7,41 +7,31 @@ export const EXPERIENCE_DATA = [
     description: (
       <ul className="space-y-1 list-disc list-outside">
         <li>
-          Collaborated with the team lead to revamp the codebase and developed a
-          separate module in the monorepo.
+          Revamped existing codebase and built new modules in a monorepo,
+          improving maintainability by ∼30%.
         </li>
         <li>
-          Designed and implemented a reporting module from scratch, enabling the
-          creation, editing, and updating of patient reports.
+          Designed and launched a reporting module from scratch, cutting manual
+          reporting time by ∼40%.
         </li>
         <li>
-          Developed an Annotations feature to display on-screen annotations and
-          store them in the database for respective studies.
+          Engineered an annotations feature (React + DRF), supporting 100+
+          study-specific records daily.
         </li>
         <li>
-          Built backend services for the annotations module using Django REST
-          Framework (DRF) and integrated them into the main application.
+          Automated CI/CD with Bitbucket pipelines, reducing deployment time
+          from 30 min to less than 5 min.
         </li>
         <li>
-          Developed Bitbucket pipelines to automate deployment processes for
-          staging and production environments.
+          Enforced strict TypeScript typing, reducing runtime bugs by ∼50% and
+          speeding up debugging.
         </li>
         <li>
-          Implemented TypeScript to enforce strict typing, making the
-          application more robust, easier to debug, and reducing errors.
+          Integrated React Query for data caching, improving load times by ∼35%.
         </li>
         <li>
-          Documented all contributions to facilitate understanding for other
-          developers and maintained an Architecture Decision Record (ADR) for
-          the project.
-        </li>
-        <li>
-          Integrated React Query for data caching and optimization, enhancing
-          performance.
-        </li>
-        <li>
-          Optimized the filter search functionality for studies, improving user
-          experience.
+          Optimized study filter search, reducing latency by ∼50% and enhancing
+          UX.
         </li>
       </ul>
     ),

@@ -1,13 +1,13 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
-import { TypeAnimation } from 'react-type-animation';
-import { motion, useInView } from 'framer-motion';
-import Link from 'next/link';
+"use client";
+import React from "react";
+import Image from "next/image";
+import { TypeAnimation } from "react-type-animation";
+import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 
-const HeroSection = ({ scrollToContact }) => {
+const HeroSection = ({}) => {
   return (
-    <section className="lg:py-16" id='home'>
+    <section className="lg:py-28" id="home">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -17,16 +17,16 @@ const HeroSection = ({ scrollToContact }) => {
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#af67f9] to-[#e48d87]">
-              Hi, I&apos;m{' '}
+              Hi, I&apos;m{" "}
             </span>
             <br></br>
             <TypeAnimation
               sequence={[
-                'Rabah Ali Shah',
+                "Rabah Ali Shah",
                 1000,
-                'Software Engineer',
+                "Software Engineer",
                 1000,
-                'Problem Solver',
+                "Problem Solver",
                 1000,
               ]}
               wrapper="span"
@@ -67,7 +67,6 @@ const HeroSection = ({ scrollToContact }) => {
               src="/images/Rabah_Ali_Shah_Profile_port.webp"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
-              
               width={400}
               height={100}
             />
