@@ -29,7 +29,7 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-base lg:text-lg text-center lg:text-left">
-            I am a self taught software engineer. Highly passionate about
+            I am a professional software engineer. Highly passionate about
             designing systems for large scale applications. Currently working as
             an Associate software at Xylexa Inc. Contributing in an Open source
             OHIF Monorepo for developing highly optimized front-end application
