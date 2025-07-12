@@ -7,31 +7,23 @@ export const EXPERIENCE_DATA = [
     description: (
       <ul className="space-y-1 list-disc list-outside">
         <li>
-          Revamped existing codebase and built new modules in a monorepo,
-          improving maintainability by ∼30%.
+          Refactored monorepo codebase and built new modules, boosting
+          maintainability.
         </li>
         <li>
-          Designed and launched a reporting module from scratch, cutting manual
-          reporting time by ∼40%.
+          Developed reporting module, cutting radiologist reporting time by
+          ∼80%; integrated Mixpanel for time tracking.
         </li>
         <li>
-          Engineered an annotations feature (React + DRF), supporting 100+
-          study-specific records daily.
+          Automated CI/CD via Bitbucket, slashing deployments from 30 min to 5
+          min.
         </li>
         <li>
-          Automated CI/CD with Bitbucket pipelines, reducing deployment time
-          from 30 min to less than 5 min.
+          Enforced strict TypeScript, reducing bugs and speeding up debugging.
         </li>
         <li>
-          Enforced strict TypeScript typing, reducing runtime bugs by ∼50% and
-          speeding up debugging.
-        </li>
-        <li>
-          Integrated React Query for data caching, improving load times by ∼35%.
-        </li>
-        <li>
-          Optimized study filter search, reducing latency by ∼50% and enhancing
-          UX.
+          Used React Query for caching, reducing load times; optimized study
+          search, cutting latency by ∼10%.
         </li>
       </ul>
     ),
@@ -40,6 +32,33 @@ export const EXPERIENCE_DATA = [
     jobType: "Full-time",
     location: "Islamabad, Pakistan",
     company: "Xylexa, Inc",
+  },
+  {
+    title: "DevOps Fellow",
+    image: "/images/experience/BYTEWISE.png",
+    bg: "bg-[#a633f1]",
+    link: "https://www.linkedin.com/company/bytewiseltd",
+    description: (
+      <ul className=" space-y-1 list-disc list-outside">
+        <li>
+          Completed an intensive DevOps fellowship, mastering CI/CD, docker and
+          a 10+ hour computer networking course.
+        </li>
+        <li>
+          Deployed a real-world project, implementing Jenkins pipelines to
+          automate workflows by ∼35%.
+        </li>
+        <li>
+          Collaborated with 20+ peers and mentors, gaining hands-on insights
+          into industry best practices.
+        </li>
+      </ul>
+    ),
+    startDate: "June 2024",
+    EndData: "September 2024",
+    jobType: "Fellowship",
+    location: "Remote",
+    company: "Bytewise Limited",
   },
   {
     title: "Frontend Developer",
@@ -85,29 +104,17 @@ export const EXPERIENCE_DATA = [
     description: (
       <ul className="space-y-1 list-disc list-outside">
         <li>
-          V3 Development: Collaborate with the development team to work on the
-          latest version of XyCAD (V3). Actively involved in creating new
-          features, implementing UI components, and ensuring a smooth and
-          efficient user interface.
+          • Contributed to XyCAD V3 by developing responsive UI components in
+          React.js, used daily by 30+ radiologists.
         </li>
         <li>
-          Responsive UIs: Leveraged my expertise in React.js and front-end
-          development to design and develop responsive user interfaces. This
-          involves ensuring that XyCAD is accessible and functional across
-          various devices and screen sizes.
+          • Contributed in XyConnect Portal (project and team management tool)
+          from wireframing to development, accelerating feature delivery by ∼10%
         </li>
         <li>
-          Front-End Optimization: Taking the initiative to analyze the existing
-          codebase of V2 and identify areas that can be optimized. Improving the
-          performance and efficiency of the front-end code to enhance the
-          overall user experience.
+          • Collaborated closely with cross-functional teams for seamless
+          backend integration.
         </li>
-        <i>
-          Problem-Solving: As working on V3 and optimizing V2, we are
-          encountering various challenges and roadblocks. Using problem-solving
-          skills and collaborating with team to find innovative solutions and
-          implement best practices to address these issues effectively.
-        </i>
       </ul>
     ),
     startDate: "June 2023",
